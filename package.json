@@ -1,0 +1,27 @@
+{
+  "name": "introdution-slidev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build",
+    "export": "slidev export"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/N-i-ke/introdution-slidev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/N-i-ke/introdution-slidev/issues"
+  },
+  "homepage": "https://github.com/N-i-ke/introdution-slidev#readme",
+  "devDependencies": {
+    "@slidev/cli": "^52.14.0",
+    "@slidev/theme-default": "^0.25.0"
+  }
+}
