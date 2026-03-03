@@ -172,6 +172,7 @@ transition: slide-up
       <span class="stack-tag">Vue.js</span>
       <span class="stack-tag">TypeScript</span>
       <span class="stack-tag">Node.js</span>
+      <span class="stack-tag">Express.js</span>
     </div>
   </div>
   <div v-click class="career-card">
