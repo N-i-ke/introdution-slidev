@@ -133,6 +133,111 @@ transition: slide-up
 </style>
 
 ---
+transition: slide-up
+---
+
+# Career History 📋
+
+<div class="grid grid-cols-1 gap-4 pt-6">
+  <div v-click class="career-card">
+    <div class="career-period">2023/07 - 2024/07</div>
+    <div class="career-info">
+      <div class="font-bold text-lg">BENLY inc.</div>
+      <div class="text-sm opacity-70">Web Creator</div>
+    </div>
+    <div class="career-stack">
+      <span class="stack-tag">HTML</span>
+      <span class="stack-tag">CSS</span>
+      <span class="stack-tag">Sass</span>
+      <span class="stack-tag">jQuery</span>
+      <span class="stack-tag">JavaScript</span>
+      <span class="stack-tag">Liquid</span>
+      <span class="stack-tag">WordPress</span>
+      <span class="stack-tag">Shopify</span>
+    </div>
+  </div>
+  <div v-click class="career-card">
+    <div class="career-period">2024/08 - 2025/12</div>
+    <div class="career-info">
+      <div class="font-bold text-lg">N2i inc.</div>
+      <div class="text-sm opacity-70">Frontend Developer</div>
+    </div>
+    <div class="career-stack">
+      <span class="stack-tag">HTML</span>
+      <span class="stack-tag">CSS</span>
+      <span class="stack-tag">Sass</span>
+      <span class="stack-tag">JavaScript</span>
+      <span class="stack-tag">React.js</span>
+      <span class="stack-tag">Next.js</span>
+      <span class="stack-tag">Vue.js</span>
+      <span class="stack-tag">TypeScript</span>
+      <span class="stack-tag">Node.js</span>
+    </div>
+  </div>
+  <div v-click class="career-card">
+    <div class="career-period">2026/01 - Now</div>
+    <div class="career-info">
+      <div class="font-bold text-lg">LINE Digital Frontier corp.</div>
+      <div class="text-sm opacity-70">Frontend Developer</div>
+    </div>
+    <div class="career-stack">
+      <span class="stack-tag">HTML</span>
+      <span class="stack-tag">CSS</span>
+      <span class="stack-tag">Sass</span>
+      <span class="stack-tag">JavaScript</span>
+      <span class="stack-tag">Vue.js</span>
+      <span class="stack-tag">Nuxt.js</span>
+      <span class="stack-tag">TypeScript</span>
+    </div>
+  </div>
+</div>
+
+<style>
+.career-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  transition: all 0.3s ease;
+}
+.career-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #4EC5D4;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(78, 197, 212, 0.15);
+}
+.career-period {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #4EC5D4;
+  white-space: nowrap;
+  min-width: 140px;
+  font-family: monospace;
+}
+.career-info {
+  min-width: 180px;
+}
+.career-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  flex: 1;
+}
+.stack-tag {
+  font-size: 0.65rem;
+  padding: 0.15rem 0.5rem;
+  background: rgba(78, 197, 212, 0.15);
+  border: 1px solid rgba(78, 197, 212, 0.3);
+  border-radius: 4px;
+  color: #4EC5D4;
+  white-space: nowrap;
+}
+</style>
+
+---
 layout: center
 transition: slide-left
 ---
@@ -178,28 +283,28 @@ transition: slide-left
 transition: fade
 ---
 
-# これからの目標 🎯
+# Future Goals 🎯
 
 <div class="mt-8 space-y-6">
   <div v-click class="goal-card">
     <div class="goal-number">01</div>
     <div>
-      <div class="font-bold text-lg">新しい技術の習得</div>
-      <div class="text-sm opacity-60 mt-1">最新のフレームワークやツールをキャッチアップ</div>
+      <div class="font-bold text-lg">Learn New Technologies</div>
+      <div class="text-sm opacity-60 mt-1">Keep up with the latest frameworks and tools</div>
     </div>
   </div>
   <div v-click class="goal-card">
     <div class="goal-number">02</div>
     <div>
-      <div class="font-bold text-lg">チーム開発の経験を積む</div>
-      <div class="text-sm opacity-60 mt-1">アジャイル・スクラムでのチーム協業</div>
+      <div class="font-bold text-lg">Gain Team Development Experience</div>
+      <div class="text-sm opacity-60 mt-1">Collaborate in Agile / Scrum teams</div>
     </div>
   </div>
   <div v-click class="goal-card">
     <div class="goal-number">03</div>
     <div>
-      <div class="font-bold text-lg">OSS活動への参加</div>
-      <div class="text-sm opacity-60 mt-1">オープンソースコミュニティへの貢献</div>
+      <div class="font-bold text-lg">Contribute to OSS</div>
+      <div class="text-sm opacity-60 mt-1">Give back to the open-source community</div>
     </div>
   </div>
 </div>
@@ -234,10 +339,10 @@ class: text-center
 transition: fade
 ---
 
-# ご清聴ありがとうございました！ 🙏
+# Thank you for listening! 🙏
 
 <div v-click class="mt-8 text-xl opacity-80">
-  ご質問があればどうぞ！
+  Feel free to ask any questions!
 </div>
 
 <div v-click class="mt-12 flex justify-center gap-6">
