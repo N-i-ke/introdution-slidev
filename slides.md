@@ -142,7 +142,7 @@ transition: slide-up
   <div v-click class="career-card">
     <div class="career-period">2023/07 - 2024/07</div>
     <div class="career-info">
-      <div class="font-bold text-lg">BENLY inc.</div>
+      <a href="https://benly.co.jp" target="_blank" class="company-link font-bold text-lg">VOYAGER JAPAN inc. <span class="text-xs opacity-50">(formerly BENLY)</span></a>
       <div class="text-sm opacity-70">Web Creator</div>
     </div>
     <div class="career-stack">
@@ -159,7 +159,7 @@ transition: slide-up
   <div v-click class="career-card">
     <div class="career-period">2024/08 - 2025/12</div>
     <div class="career-info">
-      <div class="font-bold text-lg">N2i inc.</div>
+      <a href="https://n2i.jp" target="_blank" class="company-link font-bold text-lg">N2i inc.</a>
       <div class="text-sm opacity-70">Frontend Developer</div>
     </div>
     <div class="career-stack">
@@ -177,7 +177,7 @@ transition: slide-up
   <div v-click class="career-card">
     <div class="career-period">2026/01 - Now</div>
     <div class="career-info">
-      <div class="font-bold text-lg">LINE Digital Frontier corp.</div>
+      <a href="https://ldfcorp.com/ja" target="_blank" class="company-link font-bold text-lg">LINE Digital Frontier corp.</a>
       <div class="text-sm opacity-70">Frontend Developer</div>
     </div>
     <div class="career-stack">
@@ -225,6 +225,15 @@ transition: slide-up
   flex-wrap: wrap;
   gap: 0.3rem;
   flex: 1;
+}
+.company-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.company-link:hover {
+  color: #4EC5D4;
 }
 .stack-tag {
   font-size: 0.65rem;
@@ -296,15 +305,15 @@ transition: fade
   <div v-click class="goal-card">
     <div class="goal-number">02</div>
     <div>
-      <div class="font-bold text-lg">Gain Team Development Experience</div>
-      <div class="text-sm opacity-60 mt-1">Collaborate in Agile / Scrum teams</div>
+      <div class="font-bold text-lg">Pursue Frontend Architecture & CI/CD</div>
+      <div class="text-sm opacity-60 mt-1">Deep dive into frontend architecture design and CI/CD pipelines</div>
     </div>
   </div>
   <div v-click class="goal-card">
     <div class="goal-number">03</div>
     <div>
-      <div class="font-bold text-lg">Contribute to OSS</div>
-      <div class="text-sm opacity-60 mt-1">Give back to the open-source community</div>
+      <div class="font-bold text-lg">Gain Team Development Experience</div>
+      <div class="text-sm opacity-60 mt-1">Collaborate in Agile / Scrum teams</div>
     </div>
   </div>
 </div>
