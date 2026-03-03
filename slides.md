@@ -383,15 +383,34 @@ transition: fade
 @media (max-width: 640px) {
   .slidev-layout {
     padding: 1.2rem !important;
+    font-size: 1.35em !important;
+  }
+
+  .slidev-layout p,
+  .slidev-layout li {
+    font-size: 1.3em !important;
+    line-height: 1.45 !important;
+  }
+
+  .slidev-layout .text-sm {
+    font-size: 1.15em !important;
+  }
+
+  .slidev-layout .text-lg {
+    font-size: 1.5em !important;
+  }
+
+  .slidev-layout .text-xl {
+    font-size: 1.65em !important;
   }
 
   h1 {
-    font-size: 1.8rem !important;
+    font-size: 2.4rem !important;
     line-height: 1.2 !important;
   }
 
   .text-gradient {
-    font-size: 2.2em !important;
+    font-size: 3em !important;
   }
 
   .slidev-layout.two-cols {
@@ -417,7 +436,7 @@ transition: fade
   }
 
   .stack-tag {
-    font-size: 0.58rem;
+    font-size: 0.8rem;
   }
 }
 </style>
