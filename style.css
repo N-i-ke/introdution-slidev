@@ -46,6 +46,14 @@ body,
     0 4px 32px rgba(0, 0, 0, 0.4) !important;
 }
 
+@media (max-width: 768px) {
+  #slide-container {
+    width: 95vw !important;
+    height: 88vh !important;
+    border-radius: 12px !important;
+  }
+}
+
 /* Make slide background slightly transparent for cosmic feel */
 .slidev-layout {
   background: rgba(5, 8, 15, 0.85) !important;

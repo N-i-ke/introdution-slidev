@@ -82,7 +82,7 @@ transition: slide-up
 
 # technology stack ⚡
 
-<div class="grid grid-cols-3 gap-4 pt-4">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-4">
   <div v-click class="tech-card">
     <div class="text-3xl mb-2">🌐</div>
     <div class="font-bold">Frontend</div>
@@ -254,7 +254,7 @@ transition: slide-left
 
 # interest 🎯
 
-<div class="grid grid-cols-2 gap-8 pt-6">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 pt-6">
   <div v-click v-motion :initial="{ x: -80, opacity: 0 }" :enter="{ x: 0, opacity: 1, transition: { delay: 100 } }" class="hobby-item">
     <span class="text-4xl">🍻</span>
     <span class="ml-4 text-xl">drink</span>
@@ -376,5 +376,48 @@ transition: fade
   border-color: #4EC5D4;
   background: rgba(78, 197, 212, 0.1);
   transform: translateY(-2px);
+}
+</style>
+
+<style>
+@media (max-width: 640px) {
+  .slidev-layout {
+    padding: 1.2rem !important;
+  }
+
+  h1 {
+    font-size: 1.8rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .text-gradient {
+    font-size: 2.2em !important;
+  }
+
+  .slidev-layout.two-cols {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .career-card,
+  .goal-card,
+  .hobby-item {
+    padding: 0.8rem 1rem !important;
+    gap: 0.8rem !important;
+  }
+
+  .career-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .career-period,
+  .career-info {
+    min-width: 0 !important;
+  }
+
+  .stack-tag {
+    font-size: 0.58rem;
+  }
 }
 </style>
