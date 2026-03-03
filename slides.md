@@ -1,15 +1,15 @@
 ---
-title: "自己紹介スライド"
+title: "introduction"
 theme: default
 transition: slide-left
 mdc: true
 ---
 
-# 自己紹介 {.text-gradient}
+# Introduction {.text-gradient}
 
 <div class="pt-12">
   <span v-click class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Frontend Engineer 🚀
+    Frontend Developer
   </span>
 </div>
 
@@ -39,13 +39,13 @@ layout: two-cols
 layoutClass: gap-16
 ---
 
-# 基本情報 {.text-info}
+# Basic Information {.text-info}
 
 <v-clicks>
 
-- 📛 **名前** - （あなたの名前）
-- 🎂 **年齢** - （例：28歳）
-- 💼 **職業** - フロントエンドエンジニア
+- 📛 **Name** - Kengo Nishi
+- 🎂 **Age** - 24
+- 💼 **role** - Frontend Developer
 
 </v-clicks>
 
@@ -80,7 +80,7 @@ languages:
 transition: slide-up
 ---
 
-# 技術スタック ⚡
+# technology stack ⚡
 
 <div class="grid grid-cols-3 gap-4 pt-4">
   <div v-click class="tech-card">
@@ -91,12 +91,12 @@ transition: slide-up
   <div v-click class="tech-card">
     <div class="text-3xl mb-2">🔷</div>
     <div class="font-bold">TypeScript</div>
-    <div class="text-sm opacity-70">型安全な開発</div>
+    <div class="text-sm opacity-70">Type Safety</div>
   </div>
   <div v-click class="tech-card">
     <div class="text-3xl mb-2">⚛️</div>
     <div class="font-bold">React / Vue.js</div>
-    <div class="text-sm opacity-70">SPA / コンポーネント</div>
+    <div class="text-sm opacity-70">SPA / Component</div>
   </div>
   <div v-click class="tech-card">
     <div class="text-3xl mb-2">🚀</div>
@@ -106,12 +106,12 @@ transition: slide-up
   <div v-click class="tech-card">
     <div class="text-3xl mb-2">🐙</div>
     <div class="font-bold">Git / GitHub</div>
-    <div class="text-sm opacity-70">バージョン管理</div>
+    <div class="text-sm opacity-70">version control</div>
   </div>
   <div v-click class="tech-card">
     <div class="text-3xl mb-2">📦</div>
-    <div class="font-bold">npm / pnpm</div>
-    <div class="text-sm opacity-70">パッケージ管理</div>
+    <div class="font-bold">npm / pnpm / yarn</div>
+    <div class="text-sm opacity-70">package control</div>
   </div>
 </div>
 
@@ -137,24 +137,24 @@ layout: center
 transition: slide-left
 ---
 
-# 趣味・関心 🎯
+# interest 🎯
 
 <div class="grid grid-cols-2 gap-8 pt-6">
   <div v-click v-motion :initial="{ x: -80, opacity: 0 }" :enter="{ x: 0, opacity: 1, transition: { delay: 100 } }" class="hobby-item">
-    <span class="text-4xl">🎵</span>
-    <span class="ml-4 text-xl">音楽鑑賞</span>
+    <span class="text-4xl">🍻</span>
+    <span class="ml-4 text-xl">drink</span>
   </div>
   <div v-click v-motion :initial="{ x: 80, opacity: 0 }" :enter="{ x: 0, opacity: 1, transition: { delay: 200 } }" class="hobby-item">
     <span class="text-4xl">✈️</span>
-    <span class="ml-4 text-xl">旅行</span>
+    <span class="ml-4 text-xl">trip</span>
   </div>
   <div v-click v-motion :initial="{ x: -80, opacity: 0 }" :enter="{ x: 0, opacity: 1, transition: { delay: 300 } }" class="hobby-item">
-    <span class="text-4xl">🎮</span>
-    <span class="ml-4 text-xl">ゲーム</span>
+    <span class="text-4xl">🍚</span>
+    <span class="ml-4 text-xl">food</span>
   </div>
   <div v-click v-motion :initial="{ x: 80, opacity: 0 }" :enter="{ x: 0, opacity: 1, transition: { delay: 400 } }" class="hobby-item">
-    <span class="text-4xl">💻</span>
-    <span class="ml-4 text-xl">プログラミング</span>
+    <span class="text-4xl">📺</span>
+    <span class="ml-4 text-xl">watch anime drama etc...</span>
   </div>
 </div>
 
