@@ -64,3 +64,37 @@ body,
 .slidev-layout h4 {
   color: #fff;
 }
+
+/* ===== Mobile (SP) responsive ===== */
+@media (max-width: 768px) {
+  #slide-container {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  #page-root {
+    width: 100vw !important;
+    height: 100vh !important;
+  }
+
+  /* Tech stack cards: bigger on SP */
+  .tech-card {
+    padding: 1.2rem 1rem !important;
+    gap: 0.8rem !important;
+    border-radius: 14px !important;
+  }
+
+  .tech-card span[class*="text-xl"] {
+    font-size: 2rem !important;
+  }
+
+  .tech-card .font-bold {
+    font-size: 1rem !important;
+  }
+
+  .tech-card .opacity-70 {
+    font-size: 0.85rem !important;
+  }
+}

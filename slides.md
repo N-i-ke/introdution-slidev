@@ -82,53 +82,57 @@ transition: slide-up
 
 # technology stack ⚡
 
-<div class="grid grid-cols-3 gap-4 pt-4">
+<div class="tech-grid">
   <div v-click class="tech-card">
-    <div class="text-3xl mb-2">🌐</div>
-    <div class="font-bold">Frontend</div>
-    <div class="text-sm opacity-70">HTML / CSS / JS</div>
+    <span class="tech-icon">🌐</span>
+    <div><div class="font-bold">Frontend</div><div class="opacity-70">HTML / CSS / JS</div></div>
   </div>
   <div v-click class="tech-card">
-    <div class="text-3xl mb-2">🔷</div>
-    <div class="font-bold">TypeScript</div>
-    <div class="text-sm opacity-70">Type Safety</div>
+    <span class="tech-icon">🔷</span>
+    <div><div class="font-bold">TypeScript</div><div class="opacity-70">Type Safety</div></div>
   </div>
   <div v-click class="tech-card">
-    <div class="text-3xl mb-2">⚛️</div>
-    <div class="font-bold">React / Vue.js</div>
-    <div class="text-sm opacity-70">SPA / Component</div>
+    <span class="tech-icon">⚛️</span>
+    <div><div class="font-bold">React / Vue.js</div><div class="opacity-70">SPA / Component</div></div>
   </div>
   <div v-click class="tech-card">
-    <div class="text-3xl mb-2">🚀</div>
-    <div class="font-bold">Next.js / Nuxt.js</div>
-    <div class="text-sm opacity-70">SSR / SSG</div>
+    <span class="tech-icon">🚀</span>
+    <div><div class="font-bold">Next.js / Nuxt.js</div><div class="opacity-70">SSR / SSG</div></div>
   </div>
   <div v-click class="tech-card">
-    <div class="text-3xl mb-2">🐙</div>
-    <div class="font-bold">Git / GitHub</div>
-    <div class="text-sm opacity-70">version control</div>
+    <span class="tech-icon">🐙</span>
+    <div><div class="font-bold">Git / GitHub</div><div class="opacity-70">Version Control</div></div>
   </div>
   <div v-click class="tech-card">
-    <div class="text-3xl mb-2">📦</div>
-    <div class="font-bold">npm / pnpm / yarn</div>
-    <div class="text-sm opacity-70">package control</div>
+    <span class="tech-icon">📦</span>
+    <div><div class="font-bold">npm / pnpm / yarn</div><div class="opacity-70">Package Manager</div></div>
   </div>
 </div>
 
 <style>
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding-top: 1.5rem;
+}
 .tech-card {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  padding: 1.2rem;
-  text-align: center;
+  padding: 0.9rem 1.2rem;
   transition: all 0.3s ease;
 }
 .tech-card:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(78, 197, 212, 0.1);
   border-color: #4EC5D4;
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(78, 197, 212, 0.15);
+}
+.tech-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
 }
 </style>
 
