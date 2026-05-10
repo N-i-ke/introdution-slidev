@@ -15,7 +15,7 @@ export const slides: readonly SlideMeta[] = [
     title: 'Basic Information',
     totalSteps: 4,
     transition: 'fade-out',
-    component: () => import('~/components/slides/SlidePlaceholder.vue'),
+    component: () => import('~/components/slides/SlideBasicInfo.vue'),
   },
   {
     no: 3,
@@ -23,7 +23,7 @@ export const slides: readonly SlideMeta[] = [
     title: 'Technology Stack',
     totalSteps: 6,
     transition: 'slide-up',
-    component: () => import('~/components/slides/SlidePlaceholder.vue'),
+    component: () => import('~/components/slides/SlideTechStack.vue'),
   },
   {
     no: 4,
@@ -31,7 +31,7 @@ export const slides: readonly SlideMeta[] = [
     title: 'Career History',
     totalSteps: 3,
     transition: 'slide-up',
-    component: () => import('~/components/slides/SlidePlaceholder.vue'),
+    component: () => import('~/components/slides/SlideCareer.vue'),
   },
   {
     no: 5,
@@ -39,7 +39,7 @@ export const slides: readonly SlideMeta[] = [
     title: 'Interest',
     totalSteps: 4,
     transition: 'slide-left',
-    component: () => import('~/components/slides/SlidePlaceholder.vue'),
+    component: () => import('~/components/slides/SlideInterest.vue'),
   },
   {
     no: 6,
@@ -47,7 +47,7 @@ export const slides: readonly SlideMeta[] = [
     title: 'Future Goals',
     totalSteps: 3,
     transition: 'fade',
-    component: () => import('~/components/slides/SlidePlaceholder.vue'),
+    component: () => import('~/components/slides/SlideGoals.vue'),
   },
   {
     no: 7,
@@ -55,7 +55,7 @@ export const slides: readonly SlideMeta[] = [
     title: 'Thank you',
     totalSteps: 2,
     transition: 'fade',
-    component: () => import('~/components/slides/SlidePlaceholder.vue'),
+    component: () => import('~/components/slides/SlideThanks.vue'),
   },
 ] as const
 
