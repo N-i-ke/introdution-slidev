@@ -1,0 +1,48 @@
+@import url('./tokens.css');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#__nuxt {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--color-bg-base-1);
+  color: var(--color-fg);
+  font-family: 'Nunito Sans', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+#__nuxt {
+  min-height: 100svh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* Slide-level transition (used by <Transition name="slide-fade"> in pages/[no].vue) */
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: opacity var(--duration-slide) ease, transform var(--duration-slide) ease;
+}
+
+.slide-fade-enter-from {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.slide-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-12px);
+}

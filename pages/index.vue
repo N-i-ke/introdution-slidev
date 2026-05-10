@@ -1,8 +1,7 @@
 <script setup lang="ts">
-useKeyboardNav()
+await navigateTo('/1', { redirectCode: 301 })
 </script>
 
 <template>
-  <CosmicBackground />
-  <NuxtPage />
+  <div />
 </template>

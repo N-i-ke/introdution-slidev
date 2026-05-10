@@ -1,0 +1,18 @@
+:root {
+  --color-bg-base-1: #05080f;
+  --color-bg-base-2: #0b1120;
+  --color-bg-base-3: #0d0f1a;
+  --color-fg: #ffffff;
+  --color-accent: #4EC5D4;
+  --color-accent-deep: #146b8c;
+  --color-accent-mid: #2B90B6;
+
+  --shadow-stage:
+    0 0 80px rgba(78, 197, 212, 0.08),
+    0 0 160px rgba(0, 0, 0, 0.6),
+    0 4px 32px rgba(0, 0, 0, 0.4);
+
+  --radius-stage: 16px;
+  --duration-step: 220ms;
+  --duration-slide: 320ms;
+}

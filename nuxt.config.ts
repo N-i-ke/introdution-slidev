@@ -1,3 +1,5 @@
+import { SLIDE_TOTAL } from './data/slides'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2026-01-01',
@@ -9,6 +11,12 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxt/fonts',
     '@nuxt/icon',
+  ],
+
+  css: ['~/assets/styles/main.css'],
+
+  components: [
+    { path: '~/components', pathPrefix: false },
   ],
 
   app: {
@@ -34,7 +42,7 @@ export default defineNuxtConfig({
     preset: 'vercel-static',
     prerender: {
       crawlLinks: false,
-      routes: ['/'],
+      routes: ['/', ...Array.from({ length: SLIDE_TOTAL }, (_, i) => `/${i + 1}`)],
     },
   },
 
