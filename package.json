@@ -1,27 +1,44 @@
 {
   "name": "introdution-slidev",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Kengo Nishi - Introduction (Nuxt 3)",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "slidev",
-    "build": "slidev build",
-    "export": "slidev export"
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/N-i-ke/introdution-slidev.git"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/N-i-ke/introdution-slidev/issues"
   },
   "homepage": "https://github.com/N-i-ke/introdution-slidev#readme",
+  "dependencies": {
+    "@nuxt/fonts": "^0.10.3",
+    "@nuxt/icon": "^1.10.3",
+    "@unocss/nuxt": "^0.65.4",
+    "@unocss/preset-icons": "^0.65.4",
+    "@unocss/preset-uno": "^0.65.4",
+    "@vueuse/core": "^12.5.0",
+    "@vueuse/nuxt": "^12.5.0",
+    "motion-v": "^0.10.0",
+    "nuxt": "^3.15.0",
+    "unocss": "^0.65.4",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
   "devDependencies": {
-    "@slidev/cli": "^52.14.0",
-    "@slidev/theme-default": "^0.25.0"
+    "@iconify-json/carbon": "^1.2.5",
+    "@types/node": "^22.10.5",
+    "typescript": "^5.7.3",
+    "vue-tsc": "^2.2.0"
   }
 }
