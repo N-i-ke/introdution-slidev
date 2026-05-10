@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxt/fonts',
     '@nuxt/icon',
+    'motion-v/nuxt',
   ],
 
   css: ['~/assets/styles/main.css'],

@@ -7,7 +7,7 @@ export const slides: readonly SlideMeta[] = [
     title: 'Introduction',
     totalSteps: 1,
     transition: 'slide-left',
-    component: () => import('~/components/slides/SlidePlaceholder.vue'),
+    component: () => import('~/components/slides/SlideIntro.vue'),
   },
   {
     no: 2,
