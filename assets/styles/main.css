@@ -31,18 +31,46 @@ button {
   font-family: inherit;
 }
 
-/* Slide-level transition (used by <Transition name="slide-fade"> in pages/[no].vue) */
-.slide-fade-enter-active,
-.slide-fade-leave-active {
-  transition: opacity var(--duration-slide) ease, transform var(--duration-slide) ease;
+/* ===== View Transitions API: cross-slide root transition =====
+ * Triggered automatically when navigating /N -> /M while
+ * experimental.viewTransition is enabled in nuxt.config.
+ */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 360ms;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: both;
 }
 
-.slide-fade-enter-from {
-  opacity: 0;
-  transform: translateY(12px);
+::view-transition-old(root) {
+  animation-name: slide-vt-out;
 }
 
-.slide-fade-leave-to {
-  opacity: 0;
-  transform: translateY(-12px);
+::view-transition-new(root) {
+  animation-name: slide-vt-in;
+}
+
+@keyframes slide-vt-out {
+  to {
+    opacity: 0;
+    transform: translateY(-12px) scale(0.985);
+  }
+}
+
+@keyframes slide-vt-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.985);
+    filter: blur(2px);
+  }
+  to {
+    filter: blur(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
 }

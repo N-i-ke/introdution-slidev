@@ -5,25 +5,22 @@ const visible = computed(() => step.value >= props.step)
 </script>
 
 <template>
-  <Transition name="step" appear>
-    <div v-if="visible" class="slide-step">
+  <AnimatePresence>
+    <Motion
+      v-if="visible"
+      :initial="{ opacity: 0, y: 14, scale: 0.97 }"
+      :animate="{ opacity: 1, y: 0, scale: 1 }"
+      :exit="{ opacity: 0, y: -8, scale: 0.97 }"
+      :transition="{ type: 'spring', stiffness: 260, damping: 24, mass: 0.8 }"
+      class="slide-step"
+    >
       <slot />
-    </div>
-  </Transition>
+    </Motion>
+  </AnimatePresence>
 </template>
 
 <style scoped>
-.step-enter-active,
-.step-leave-active {
-  transition: opacity 220ms ease, transform 220ms ease;
-}
-
-.step-enter-from {
-  opacity: 0;
-  transform: translateY(8px);
-}
-
-.step-leave-to {
-  opacity: 0;
+.slide-step {
+  display: block;
 }
 </style>
