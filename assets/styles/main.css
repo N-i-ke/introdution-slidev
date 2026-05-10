@@ -1,0 +1,76 @@
+@import url('./tokens.css');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#__nuxt {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--color-bg-base-1);
+  color: var(--color-fg);
+  font-family: 'Nunito Sans', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+#__nuxt {
+  min-height: 100svh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* ===== View Transitions API: cross-slide root transition =====
+ * Triggered automatically when navigating /N -> /M while
+ * experimental.viewTransition is enabled in nuxt.config.
+ */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 360ms;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: both;
+}
+
+::view-transition-old(root) {
+  animation-name: slide-vt-out;
+}
+
+::view-transition-new(root) {
+  animation-name: slide-vt-in;
+}
+
+@keyframes slide-vt-out {
+  to {
+    opacity: 0;
+    transform: translateY(-12px) scale(0.985);
+  }
+}
+
+@keyframes slide-vt-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.985);
+    filter: blur(2px);
+  }
+  to {
+    filter: blur(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}

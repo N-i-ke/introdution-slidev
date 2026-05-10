@@ -1,2 +1,24 @@
+# Dependencies
 node_modules
+
+# Build outputs (Nuxt)
+.nuxt
+.output
+.data
+.vercel
 dist
+
+# Logs / cache
+*.log
+.DS_Store
+
+# Local env
+.env
+.env.*
+!.env.example
+
+# Editor
+.idea
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
