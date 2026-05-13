@@ -6,6 +6,14 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: true,
 
+  runtimeConfig: {
+    public: {
+      // 設定: 環境変数 NUXT_PUBLIC_GA_ID で渡す (例: G-XXXXXXXXXX)。
+      // 値が空のときは gtag を読み込まない。
+      gaId: '',
+    },
+  },
+
   modules: [
     '@unocss/nuxt',
     '@vueuse/nuxt',
