@@ -1,21 +1,16 @@
+/**
+ * SPA ルート遷移時の page_view 送信。
+ * gtag.js 本体と初期化スクリプトは nuxt.config.ts の app.head.script で
+ * 静的 HTML に直接焼き込んでいる (GA のタグ検出に必要)。
+ * ここでは初期化済み window.gtag を前提に page_view のみを送信する。
+ */
 export default defineNuxtPlugin(() => {
   const gaId = useRuntimeConfig().public.gaId
   if (!gaId) return
 
-  const script = document.createElement('script')
-  script.async = true
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`
-  document.head.appendChild(script)
-
-  window.dataLayer = window.dataLayer || []
-  window.gtag = function gtag(...args: unknown[]) {
-    window.dataLayer.push(args)
-  }
-  window.gtag('js', new Date())
-  window.gtag('config', gaId, { send_page_view: false })
-
   const router = useRouter()
   const sendPageView = (path: string) => {
+    if (typeof window.gtag !== 'function') return
     window.gtag('event', 'page_view', {
       page_path: path,
       page_location: window.location.origin + path,
