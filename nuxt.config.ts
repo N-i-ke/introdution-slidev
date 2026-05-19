@@ -40,6 +40,12 @@ export default defineNuxtConfig({
     'motion-v/nuxt',
   ],
 
+  // `/` は edge (Vercel) で 308 リダイレクトしてクエリを保持する。
+  // SPA 側の meta-refresh だと UTM が落ちるため。
+  routeRules: {
+    '/': { redirect: { to: '/1', statusCode: 308 } },
+  },
+
   css: ['~/assets/styles/main.css'],
 
   components: [
@@ -70,7 +76,8 @@ export default defineNuxtConfig({
     preset: 'vercel-static',
     prerender: {
       crawlLinks: false,
-      routes: ['/', ...Array.from({ length: SLIDE_TOTAL }, (_, i) => `/${i + 1}`)],
+      // `/` は routeRules で edge リダイレクトするため prerender 対象から外す。
+      routes: Array.from({ length: SLIDE_TOTAL }, (_, i) => `/${i + 1}`),
     },
   },
 
